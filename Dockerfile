@@ -13,7 +13,6 @@ ENV LUAJIT_INC=/usr/include/luajit-2.1
 ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 RUN apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community gnu-libiconv
 
-
 # INstall nginx + lua and devel kit
 RUN apk add --no-cache nginx \
     nginx-mod-http-lua \
@@ -146,7 +145,6 @@ RUN chmod 755 /usr/bin/pull && chmod 755 /usr/bin/push && chmod 755 /usr/bin/let
 # copy in code
 ADD src/ /var/www/christork.com.ng/
 ADD errors/ /var/www/errors
-
 
 EXPOSE 443 80
 
